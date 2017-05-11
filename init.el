@@ -139,4 +139,11 @@ by Prelude.")
  ;; greet the use with some useful tip
  (run-at-time 5 nil 'prelude-tip-of-the-day))
 
+(load-theme 'monokai t)
+
+(add-to-list 'default-frame-alist '(font . "Source Code Pro for Powerline-14" ))
+(set-face-attribute 'default t :font "Source Code Pro for Powerline-14")
+
+(global-set-key (kbd "C-x g") 'magit-status)
+
 ;;; init.el ends here
