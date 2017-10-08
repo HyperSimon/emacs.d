@@ -153,7 +153,10 @@ by Prelude.")
  ;; greet the use with some useful tip
  (run-at-time 5 nil 'prelude-tip-of-the-day))
 
+;; themen
 (load-theme 'darkokai t)
+;; (load-theme 'monokai t)
+
 (global-linum-mode t)
 (add-hook 'js2-mode-hook #'hs-minor-mode)
 (add-hook 'js2-mode-hook #'js2-refactor-mode)
@@ -166,5 +169,14 @@ by Prelude.")
 
 (add-hook 'js2-mode-hook (lambda ()
                            (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)))
-;; (add-to-list 'hs-minor-mode)           
+;; (add-to-list 'hs-minor-mode)
+
+
+;; 
+(add-to-list 'default-frame-alist '(font . "Source Code Pro for Powerline-14" ))
+(set-face-attribute 'default t :font "Source Code Pro for Powerline-14")
+
+(global-set-key (kbd "C-x g") 'magit-status)
+
+
 ;;; init.el ends here
